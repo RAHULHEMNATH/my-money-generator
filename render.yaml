@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      pip show python-telegram-bot
+    startCommand: "python bot.py"
